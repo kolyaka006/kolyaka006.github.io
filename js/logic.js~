@@ -36,7 +36,11 @@
         }
             //If not empty send AJAX request
         else {
+<<<<<<< HEAD
             $.post('https://secure-eyrie-74017.herokuapp.com/endpoint/post_response', { request: $('#text').val() }, function (body, statusText, obj) {
+=======
+            $.post('http://careers.intspirit.com/endpoint/post_response', { request: $('#text').val() }, function (body, statusText, obj) {
+>>>>>>> 95d9d77329efa442bd74a52d506ce66bd7f2db90
                 if (obj.status == 204) {
                     addError(statusText)
                 }
@@ -124,7 +128,11 @@
         line.setData(data)
     }
         $('.PressMe').on('click', function () {
+<<<<<<< HEAD
             $.get("https://secure-eyrie-74017.herokuapp.com/endpoint/response_codes", function (body, statusText, obj) {
+=======
+            $.get("http://careers.intspirit.com/endpoint/response_codes", function (body, statusText, obj) {
+>>>>>>> 95d9d77329efa442bd74a52d506ce66bd7f2db90
                 if (body.result) {
                     $('.press').addClass('Green').removeClass('Red');
                     errors = 0;
@@ -183,7 +191,11 @@
             
         }
         $('.Fetch_data').on('click', function () {
+<<<<<<< HEAD
             $.get("https://secure-eyrie-74017.herokuapp.com/endpoint/data_set", function (body, statusText, obj) {
+=======
+            $.get("http://careers.intspirit.com/endpoint/data_set", function (body, statusText, obj) {
+>>>>>>> 95d9d77329efa442bd74a52d506ce66bd7f2db90
                 switch (body.type) {
                     case 'fruit': addItem(fruitArray, fruit, body.item, "fruit");
                         break;
@@ -200,4 +212,8 @@
             vegetable = {};
             $('.div_chall_3').children().last().children().remove();
         })
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 95d9d77329efa442bd74a52d506ce66bd7f2db90
