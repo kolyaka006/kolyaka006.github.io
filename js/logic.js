@@ -120,7 +120,7 @@
             var morris = { Iteration: iter, Count :count};
             data.push(morris);
         }
-        
+        //Redraw diagram
         line.setData(data)
     }
         $('.PressMe').on('click', function () {
@@ -151,7 +151,7 @@
         var vegetableArray = [];
         var fruit = {};
         var vegetable = {};
-        //FUnction for fill datas
+        //Function for fill datas
         function addItem(array, obj, item, type) {
             if (array.length > 0) {
                 if(array.indexOf(item) < 0){                  
@@ -168,6 +168,7 @@
             }
             addLi(type,item,obj[item])
         };
+        //Function for add <li> with data in <ul>
         function addLi(type, name, count) {
             var hasClass = $('.div_chall_3').children().last().children().hasClass(type)
             if (!hasClass) { 
@@ -192,7 +193,7 @@
                 };
             });
         });
-
+        //Button for clear result
         $('.Clear_all').on('click', function () {
             fruitArray = [];
             vegetableArray = [];
